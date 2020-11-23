@@ -23,12 +23,15 @@ targets:
     dependencies:
       - unzip
       - epel-release
+      - ImageMagick
   centos-7:
    dependencies:
       - epel-release
+      - ImageMagick
   sles-12:
     build_dependencies:
       - sqlite3-devel
+      - ImageMagick
 before_precompile: "packaging/setup"
 after_precompile: "packaging/teardown"
 services:
